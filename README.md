@@ -8,3 +8,4 @@ This project was made to familiarize me with making restful api in ExpressJS. th
 
 NodeJS: v18.21.1
 ExpressJS: v4.17.1
+Mongoose: v5.11.10 (For mongodb)
