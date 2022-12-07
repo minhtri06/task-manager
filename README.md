@@ -9,5 +9,7 @@ This project is aimed at getting familiar with ExpressJS framework for making ap
 # Main technology
 
 NodeJS: v18.21.1
+
 ExpressJS: v4.17.1
+
 Mongoose: v5.10.19
