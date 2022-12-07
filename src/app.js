@@ -1,13 +1,15 @@
 const express = require("express")
 const router = require("./routes/index")
 const connectDb = require("./db/connect-db")
+const notFound = require("./middleware/not-found")
 require("dotenv").config()
 
 const app = express()
 
 app.use(express.json())
 
-app.get("/api", router)
+app.use("/api", router)
+app.use(notFound)
 
 const PORT = process.env.PORT
 

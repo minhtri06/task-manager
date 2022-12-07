@@ -1,6 +1,8 @@
 # TASK MANAGER
 
-This project was made to familiarize me with making restful api in ExpressJS. this project is totally for the backend.
+## Description
+
+This project is aimed at practicing my api skills as well as get familiar with mongodb cloud database. in ExpressJS. this project is totally for the backend.
 
 # Time taken
 
@@ -8,4 +10,4 @@ This project was made to familiarize me with making restful api in ExpressJS. th
 
 NodeJS: v18.21.1
 ExpressJS: v4.17.1
-Mongoose: v5.11.10 (For mongodb)
+Mongoose: v5.10.19
