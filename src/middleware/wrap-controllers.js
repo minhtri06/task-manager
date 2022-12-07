@@ -3,12 +3,11 @@ const wrapController = (controllerObj) => {
     const wrappedController = {}
 
     for (const controller in controllerObj) {
-        wrappedController[controller] = async (req, res) => {
+        wrappedController[controller] = async (req, res, next) => {
             try {
                 await controllerObj[controller](req, res)
             } catch (error) {
-                console.log(error)
-                return res.status(500).json({ error })
+                next(error)
             }
         }
     }
