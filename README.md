@@ -6,6 +6,8 @@ This project is aimed at getting familiar with ExpressJS framework for making ap
 
 # Time taken
 
+2 days
+
 # Main technology
 
 NodeJS: v18.21.1
