@@ -2,27 +2,19 @@ const Task = require("../models/task")
 const wrapController = require("../middleware/wrap-controllers")
 
 const getAllTask = async (req, res) => {
-    try {
-        const tasks = await Task.find({})
-        return res.json({ tasks })
-    } catch {
-        return res.status(500).json({ msg: err })
-    }
+    const tasks = await Task.find({})
+    return res.json({ tasks })
 }
 
 const getTaskById = async (req, res) => {
-    try {
-        const { taskId } = req.params
-        const task = await Task.findOne({ _id: taskId })
+    const { taskId } = req.params
+    const task = await Task.findOne({ _id: taskId })
 
-        if (!task) {
-            return res.status(404).json({ msg: "No task with id " + taskId })
-        }
-
-        return res.json({ task })
-    } catch (err) {
-        return res.status(500).json({ error: err })
+    if (!task) {
+        return res.status(404).json({ msg: "No task with id " + taskId })
     }
+
+    return res.json({ task })
 }
 
 const createTask = async (req, res) => {
@@ -31,37 +23,29 @@ const createTask = async (req, res) => {
 }
 
 const deleteTask = async (req, res) => {
-    try {
-        const { taskId } = req.params
-        const task = await Task.findOneAndDelete({ _id: taskId })
+    const { taskId } = req.params
+    const task = await Task.findOneAndDelete({ _id: taskId })
 
-        if (!task) {
-            return res.status(404).json({ msg: "No task with id " + taskId })
-        }
-
-        return res.json({ task })
-    } catch (err) {
-        return res.status(500).json({ error: err })
+    if (!task) {
+        return res.status(404).json({ msg: "No task with id " + taskId })
     }
+
+    return res.json({ task })
 }
 
 const updateTask = async (req, res) => {
-    try {
-        const { taskId } = req.params
+    const { taskId } = req.params
 
-        const task = await Task.findOneAndUpdate({ _id: taskId }, req.body, {
-            new: true,
-            runValidators: true,
-        })
+    const task = await Task.findOneAndUpdate({ _id: taskId }, req.body, {
+        new: true,
+        runValidators: true,
+    })
 
-        if (!task) {
-            return res.status(404).json({ msg: "No task with id " + taskId })
-        }
-
-        return res.status(200).json({ task })
-    } catch (error) {
-        return res.status(500).json({ error })
+    if (!task) {
+        return res.status(404).json({ msg: "No task with id " + taskId })
     }
+
+    return res.status(200).json({ task })
 }
 
 const taskController = wrapController({

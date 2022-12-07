@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is aimed at practicing my api skills as well as get familiar with mongodb cloud database. in ExpressJS. this project is totally for the backend.
+This project is aimed at getting familiar with ExpressJS framework for making api, as well as mongodb cloud database. This project is totally for the backend.
 
 # Time taken
 
