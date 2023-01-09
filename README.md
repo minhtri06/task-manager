@@ -4,11 +4,11 @@
 
 This project is aimed at getting familiar with ExpressJS framework for making api, as well as mongodb cloud database. This project is totally for the backend.
 
-# Time taken
+## Time taken
 
 2 days
 
-# Main technology
+## Main technology
 
 NodeJS: v18.21.1
 
